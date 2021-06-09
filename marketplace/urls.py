@@ -9,4 +9,5 @@ urlpatterns = [
     path('editMarketplace/<int:pk>/', views.editMarketplace, name='editMarketplace'),
     path('updateMarketplace/<int:pk>/', views.updateMarketplace, name='updateMarketplace'),
     path('deleteMarketplace/<int:pk>/', views.deleteMarketplace, name='deleteMarketplace'),
+    
 ]
