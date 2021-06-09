@@ -120,17 +120,3 @@ class DjangoSession(models.Model):
     class Meta:
         managed = False
         db_table = 'django_session'
-
-
-class SellerSeller(models.Model):
-    id = models.IntegerField(primary_key=True)
-    name = models.CharField(max_length=50)
-    cnpj = models.BigIntegerField()
-    mail = models.CharField(max_length=50)
-    address = models.TextField()
-    data_created = models.DateTimeField()
-    data_updated = models.DateTimeField()
-
-    class Meta:
-        managed = False
-        db_table = 'seller'
