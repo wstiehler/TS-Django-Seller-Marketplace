@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Seller - Marketplace</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+    <div class="col-8 m-auto pt-2 pb-2 text-center">
+        <h1>Visualização do Seller</h1>
+    </div>
+    <div class="col-8 m-auto pt-3 pb-2 text-center">
+        <a href="/seller" class="btn btn-info">Voltar</a>
+    </div>
+    <div class="col-8 m-auto pt-4 pb-2 text-center">
+        <strong>Nome Fantasia: </strong>{{db.name}}<br>
+        <strong>CNPJ: </strong>{{db.cnpj}}<br>
+        <strong>MAIL: </strong>{{db.mail}}<br>
+        <strong>ENDEREÇO: </strong>{{db.address}}<br>
+        <strong>DATA CRIAÇÃO: </strong>{{db.data_created}}<br>
+        <strong>DATA ATUALIZAÇÃO: </strong>{{db.data_updated}}<br>
+    </div>
+</body>
+</html>
