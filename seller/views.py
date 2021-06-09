@@ -3,7 +3,6 @@ from seller.models import Seller
 from .form import SellerForm
 
 
-# Create your views here.
 def home(request):
     return render(request, 'base.html')
 
@@ -17,32 +16,35 @@ def seller_form(request):
     data['seller_form'] = SellerForm()
     return render(request, 'seller_form.html', data)
 
-
 def create_seller(request):
     form = SellerForm(request.POST or None)
 
     if form.is_valid():
         form.save()
-        return redirect('seller')
-    return render(request, 'seller_form.html', {'form':form})
+        return redirect('/seller')
 
-def list_seller(request, id):
+def view_seller(request, pk):
     data = {}
-    data['db'] = Seller.objects.all(id=id)
-    return render(request, 'seller.html', data)
+    data['db'] = Seller.objects.get(pk=pk)
+    return render(request, 'seller', data)
 
-def update_seller(request, id):
+def edit_seller(request, pk):
     data = {}
-    data['db'] = Seller.objects.get(id=id)
+    data['db'] = Seller.objects.get(pk=pk)
+    data['seller_form'] = SellerForm(instance=data['db'])
+    return render(request, 'seller_form.html', data)
+
+def update_seller(request, pk):
+    data = {}
+    data['db'] = Seller.objects.get(pk=pk)
     form = SellerForm(request.POST or None, instance=data['db'])
 
     if form.is_valid():
         form.save()
         return redirect('seller')
-    return render(request, 'seller_form.html', {'form':form, 'seller':seller})
 
-def delete_seller(request, id):
-    seller = Seller.objects.get(id=id)
+def delete_seller(pk):
+    seller = Seller.objects.get(pk=pk)
     seller.delete()
     return redirect('seller')
 

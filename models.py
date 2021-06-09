@@ -133,4 +133,4 @@ class SellerSeller(models.Model):
 
     class Meta:
         managed = False
-        db_table = 'seller_seller'
+        db_table = 'seller'
