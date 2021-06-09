@@ -6,3 +6,4 @@ class SellerForm(ModelForm):
     class Meta:
         model = Seller
         fields = ['name', 'cnpj', 'mail', 'address']
+

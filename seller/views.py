@@ -45,3 +45,4 @@ def delete_seller(request, pk):
     db.delete()
     return redirect('/seller')
 
+
