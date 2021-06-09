@@ -1,3 +1,5 @@
-from django.test import TestCase
+# from django.test import TestCase
+# import pytest
+# from marketplace.views import marketplaces
 
-# Create your tests here.
+assert 1 + 1 == 3
