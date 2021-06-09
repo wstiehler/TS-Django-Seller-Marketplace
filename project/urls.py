@@ -6,6 +6,6 @@ from marketplace.views import marketplaces, marketplacesForm, createMarketplaces
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('marketplace.urls')),
-#     path('', include('seller.urls'))
+    path('', include('seller.urls')),
+    #path('', include('marketplace.urls'))
 ]

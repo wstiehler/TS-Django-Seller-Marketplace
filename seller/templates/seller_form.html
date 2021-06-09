@@ -19,7 +19,7 @@
     <div class="col-8 m-auto pt-4 pb-2 text-center">
         <div id="result"></div>
 
-        <form name="form" id="form" action="{% if db %}/update_seller/{{db.id}}/{%else%}/create_seller/{% endif %}" method="POST">
+        <form name="form" id="form" action="{% if db %}/update_seller/{{db.id}}/{%else%}/create_seller/{% endif %}" method="post">
             {% csrf_token %}
             <div class="form-group mt-4">Nome: {{seller_form.name}}</div>
             <div class="form-group mt-4">CNPJ: {{seller_form.cnpj}}</div>

@@ -1,10 +1,8 @@
+from django.http import request
 from django.shortcuts import redirect, render
 from seller.models import Seller
-from .form import SellerForm
+from seller.form import SellerForm
 
-
-def home(request):
-    return render(request, 'base.html')
 
 def seller(request):
     data = {}
@@ -26,7 +24,7 @@ def create_seller(request):
 def view_seller(request, pk):
     data = {}
     data['db'] = Seller.objects.get(pk=pk)
-    return render(request, 'seller', data)
+    return render(request, 'view_seller.html', data)
 
 def edit_seller(request, pk):
     data = {}
@@ -38,13 +36,13 @@ def update_seller(request, pk):
     data = {}
     data['db'] = Seller.objects.get(pk=pk)
     form = SellerForm(request.POST or None, instance=data['db'])
-
     if form.is_valid():
         form.save()
-        return redirect('seller')
+        return redirect('/seller')
 
-def delete_seller(pk):
-    seller = Seller.objects.get(pk=pk)
-    seller.delete()
-    return redirect('seller')
+def delete_seller(request, pk):
+    db = Seller.objects.get(pk=pk)
+    db.delete()
+    return redirect('/seller')
+
 

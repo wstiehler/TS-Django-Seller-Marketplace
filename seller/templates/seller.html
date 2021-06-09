@@ -13,7 +13,7 @@
     </div>
 
     <div class="col-8 m-auto pt-3 pb-2 text-center">
-        <a href="/create_seller" class="btn btn-success">Cadastrar</a>
+        <a href="/seller_form" class="btn btn-success">Cadastrar</a>
         <a href="/" class="btn btn-success">Voltar</a>
     </div>
 
@@ -35,12 +35,12 @@
             <tr>
                 <th>{{dbs.id}}</th>
                 <td>{{dbs.name}}</td>
-                <td>{{dbs.cnpj}</td>
+                <td>{{dbs.cnpj}}</td>
                 <td>{{dbs.mail}}</td>
-                <td>{{dbs.adress}}</td>
+                <td>{{dbs.address}}</td>
                 <td>{{dbs.data_created}}</td>
                 <td>{{dbs.data_updated}} </td>
-                <td>
+                <td>   
                     <a href="/list_seller/{{dbs.id}}" class="btn btn-dark">Visualizar</a>
                     <a href="/update_seller/{{dbs.id}}" class="btn btn-primary">Atualizar</a>
                     <a href="/delete_seller/{{dbs.id}}" class="btn btn-danger btnDel">Deletar</a>
