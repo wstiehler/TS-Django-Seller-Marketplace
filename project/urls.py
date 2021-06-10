@@ -1,8 +1,7 @@
-from django import urls
+
 from django.contrib import admin
 from django.urls import path, include
-from marketplace import views
-from marketplace.views import marketplaces, marketplacesForm, createMarketplaces, editMarketplace, updateMarketplace, deleteMarketplace, viewMarketplace
+
 from django.views.generic import TemplateView
 
 
