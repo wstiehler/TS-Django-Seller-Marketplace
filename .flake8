@@ -1,4 +1,4 @@
 [flake8]
 
 ; ignore = E501
-exclude = migrations, project
+exclude = migrations,project,home/wstiehler/.cache/pypoetry/virtualenvs
